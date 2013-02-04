@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="description" content="">
+
+	<link href="css/default.css" rel="stylesheet" type="text/css" />
+	<link href="css/jquery-ui-1.9.2.custom.min.css" rel="stylesheet" type="text/css"/>
+
+	<script src="js/jquery-1.8.3.js" type="text/javascript"></script>
+	<script src="js/jquery-ui-1.9.2.custom.min.js" type="text/javascript"></script>
+<script>
+	$(document).ready(function() {
+				$('#klik').click(function(e) {
+					var gps = $('#ramka');
+					if (gps.val().toLowerCase() == 'dwiescie') {
+						$( ".jeden" ).css('display', 'none');
+						$( ".dwa" ).css('display', 'none');
+						$( "#gps1" ).css('display', 'block');
+						$( "#gps2" ).css('display', 'none');
+						$( "#gps3" ).css('display', 'none');
+						setTimeout(function() {
+							$( ".jeden" ).css('display', 'block');
+						}, 2700);
+						setTimeout(function() {
+							$( ".dwa" ).css('display', 'block');
+						}, 5700);
+					}else if (gps.val() == 'trzysta') {
+						$( ".jeden" ).css('display', 'none');
+						$( ".dwa" ).css('display', 'none');
+						$( "#gps1" ).css('display', 'none');
+						$( "#gps2" ).css('display', 'block');
+						$( "#gps3" ).css('display', 'none');
+						setTimeout(function() {
+							$( ".jeden" ).css('display', 'block');
+						}, 1700);
+						setTimeout(function() {
+							$( ".dwa" ).css('display', 'block');
+						}, 3700);
+					}else if (gps.val() == 'powyzej') {
+						$( ".jeden" ).css('display', 'none');
+						$( ".dwa" ).css('display', 'none');
+						$( "#gps1" ).css('display', 'none');
+						$( "#gps2" ).css('display', 'none');
+						$( "#gps3" ).css('display', 'block');
+						setTimeout(function() {
+							$( ".jeden" ).css('display', 'block');
+						}, 700);
+						setTimeout(function() {
+							$( ".dwa" ).css('display', 'block');
+						}, 1100);
+					}else {
+						alert('Wybierz przedział cenowy');
+					}
+				});
+	})
+</script>
+</head>
+<body>
+	<div id="srodek">
+		<h2 style="float:left;">Wybierz przedział cenowy:</h2>
+		<select name="gps" id="ramka">
+			<option></option>
+			<option value="dwiescie">do 200zł</option>
+			<option value="trzysta">do 300zł</option>
+			<option value="powyzej">powyżej 300zł</option>
+		</select>
+		<button id="klik">Szukaj</button>
+	</div>
+	<div id="gps1" style="display: none;">
+		<p>Opiń pozytywnych</p>
+		<p class="jeden">16</p>
+		<p>Opiń negatywnych</p>
+		<p class="dwa">1</p>
+		<p class="jeden"><img src="images/1.jpg" alt="1"></p>
+		<p class="jeden"><a href="http://www.ceneo.pl/15040785">CENEO</a></p>
+	</div>
+	<div id="gps2" style="display: none;">
+		<p>Opiń pozytywnych</p>
+		<p class="jeden">45</p>
+		<p>Opiń negatywnych</p>
+		<p class="dwa">4</p>
+		<p class="jeden"><img src="images/2.jpg" alt="1"></p>
+		<p class="jeden"><a href="http://www.ceneo.pl/10790588">CENEO</a></p>
+	</div>
+	<div id="gps3" style="display: none;">
+		<p>Opiń pozytywnych</p>
+		<p class="jeden">7</p>
+		<p>Opiń negatywnych</p>
+		<p class="dwa">0</p>
+		<p class="jeden"><img src="images/3.jpg" alt="1"></p>
+		<p class="jeden"><a href="http://www.ceneo.pl/10821765">CENEO</a></p>
+	</div>
+</body>
+</html>

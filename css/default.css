@@ -1,0 +1,28 @@
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	margin: 0;
+	overflow: hidden;
+}
+a {
+	color: #333333;
+}
+a img {
+	border:none;
+}
+#srodek {
+    display:block;
+    width: 400px;
+    height: 200px;
+    margin: 0 auto;
+}
+#ramka {
+    margin-left: 10px;
+    margin-top: 14px;
+}
+.jeden {
+    display: none;
+}
+.dwa {
+    display: none;
+}
